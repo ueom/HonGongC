@@ -6,10 +6,10 @@
 int main(void)
 {
 	int a =0, b =0;
-	char operator = '+';
+	char operator;
 
 	printf("Enter the integer equation: ");
-	scanf("%d%c%d", &a, operator, &b);
+	scanf("%d%c%d", &a, &operator, &b);
 
 	switch(operator)
 	{
@@ -22,9 +22,11 @@ int main(void)
 	case('*'):
 		printf("%d * %d = %d", a, b, (a*b));
 		break;
-	defalut:
+	case('/'):
 		printf("%d / %d = %d", a, b, (a/b));
 		break;
 	}
+	
+	return 0;
 }
 
